@@ -33,6 +33,7 @@ import itertools
 from targets import arista
 from targets import asa
 from targets import ios
+from targets import nxos
 from targets import junos
 
 now = datetime.date.today()
@@ -109,6 +110,9 @@ class Render():
 
     def output_junos(self, **kwargs):
         return junos.render(self, **kwargs)
+
+    def output_nxos(self, **kwargs):
+	return nxos.render(self, **kwargs)
 
 #    def __str__(self):
 #        return '\n'.join(self.output(vendor=self.vendor, afi=self.afi))

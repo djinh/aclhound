@@ -26,7 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 """
-Upload ACLs to Cisco IOS devices
+Upload ACLs to Cisco NX-OS devices
 
 The following process is followed to ensure zero impact
 
@@ -51,7 +51,7 @@ from StringIO import StringIO
 def deploy(hostname=None, acls=None, transport='ssh', save_config=False,
            timeout=60):
     """
-    Deploy code in a safe way o a Cisco IOS device.
+    Deploy code in a safe way o a Cisco NX-OS device.
     """
     try:
         username, enable_pass, password = \
